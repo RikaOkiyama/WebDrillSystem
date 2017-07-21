@@ -18,7 +18,7 @@ public class QuestionDAO extends DriverAccessor{
 			try{
 
 				//  SQLコマンド insert into=値をカラムに入れる
-				String sql = "insert into question (question, answer, activation) values (?, ?, ?)";
+				String sql = "insert into question (question, answer, activation) values (?, ?, 0)";
 
 				//  SQLコマンドの実行
 				PreparedStatement stmt = connection.prepareStatement(sql);
@@ -26,7 +26,6 @@ public class QuestionDAO extends DriverAccessor{
 				//  SQLコマンドのクエッションマークに値を、1番目から代入する
 				stmt.setString(1,question.getQuestion());
 				stmt.setString(2,question.getAnswer());
-				stmt.setInt(3,question.getActivation());
 				
 				stmt.executeUpdate();
 
@@ -41,13 +40,13 @@ public class QuestionDAO extends DriverAccessor{
 			}
 		}
 		
-		public Question Select(int id,Connection connection){
+		public Question Select(String id,Connection connection){
 
 			try{
 				String sql="select * from question where id = ?";
 
 				PreparedStatement stmt = connection.prepareStatement(sql);
-				stmt.setInt(1, id);
+				stmt.setString(1, id);
 				ResultSet rs=stmt.executeQuery();
 
 				rs.first();
@@ -99,7 +98,21 @@ public class QuestionDAO extends DriverAccessor{
 			}
 		}
 		
-		public void Delete(int id,Connection connection){
+		public void Delete(String id,Connection connection){
+			try{
+				String sql = "delete from question where id= '"+id+"' ";
+
+				PreparedStatement stmt = connection.prepareStatement(sql);
+				
+				stmt.executeUpdate();
+
+				stmt.close();
+
+			}catch(SQLException e){
+
+				e.printStackTrace();
+
+			} finally {
+			}
 		}
-		
-	}
+	}		

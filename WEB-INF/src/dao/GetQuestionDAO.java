@@ -11,13 +11,13 @@ import beans.Question;
 
 public class GetQuestionDAO extends DriverAccessor{
 	
-	public ArrayList GetList(int id,Connection connection){
+	public ArrayList GetList(String id,Connection connection){
 		
 		try{
 			String sql="select * from question_table where id = ?";
 			
 			PreparedStatement stmt = connection.prepareStatement(sql);
-			stmt.setInt(1, id);
+			stmt.setString(1, id);
 			ResultSet rs=stmt.executeQuery();
 			
 			ArrayList list = new ArrayList();

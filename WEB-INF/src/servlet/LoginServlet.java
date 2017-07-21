@@ -42,8 +42,7 @@ public class LoginServlet extends HttpServlet{
 			//ユーザーの情報を保持する
 			HttpSession session=request.getSession();
 			session.setAttribute("user",user);
-
-			response.sendRedirect(response.encodeRedirectURL("./top.jsp"));
+			response.sendRedirect(response.encodeRedirectURL("./teacher/teacherTop.jsp"));
 		}
 	}
 

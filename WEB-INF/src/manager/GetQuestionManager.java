@@ -12,7 +12,7 @@ public class GetQuestionManager {
 	public GetQuestionManager(){
 	}
 	
-	public ArrayList GetList(int id){
+	public ArrayList GetList(String id){
 		
 		GetQuestionDAO dao = new GetQuestionDAO();
 		

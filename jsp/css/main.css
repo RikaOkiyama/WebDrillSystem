@@ -1,0 +1,73 @@
+h1{
+	font-family:"Hiragino Maru Gothic ProN";
+	color:#FFFFE0;
+	font-size:50pt;
+	font-weight:900;
+}
+p.font2{
+	font-family:"Hiragino Maru Gothic ProN";
+	color:#FFFFE0;
+	font-size:25pt;
+	font-weight:600;
+}
+
+a.link1{
+    font-family:"Hiragino Maru Gothic ProN";
+	color:#FFFFE0;
+    font-style:normal;
+    font-size:25pt;
+    font-weight:600;
+}
+
+input.submit_button {
+    padding: 4px 40px;
+    width: 400px;
+    font-size: 25pt;
+    background-color: #FFFFE0;
+    font-family:"Hiragino Maru Gothic ProN";
+    color: #663300;
+    font-weight:900;
+    border-style: none;
+}
+
+
+.panel-bg,
+.panel {
+    background: url("bg.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.panel {
+    color: #000;
+    position: relative;
+}
+ 
+.panel-bg {
+    position: absolute;
+    background-clip: content-box;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
+}
+.panel-in {
+    padding: 30px;
+    position: relative;
+}
+.panel-main {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    z-index: 30;
+    position: relative;
+    background: rgba(102,51,0,0.4);
+}
+@media (max-width: 1000px) {
+    .panel-main {
+        width: 100%;
+    }
+}

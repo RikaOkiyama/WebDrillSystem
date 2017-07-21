@@ -3,45 +3,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Web Drill System</title>
-<style type ="text/css">
-</style>
+<title>ログインページ</title>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-<body bgcolor="#ccffff">
-<body background="moon.jpg">
+<body background="book.jpg">
+<br>
 
-<SCRIPT language="JavaScript">
-</SCRIPT>
-<br>
-<br>
-<br>
 <div align="center">
-<font color=white size="7"  >＊Web Drill System Login＊</font>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <div class="panel-in">
+    <div class="panel-bg"></div>
+    <div class="panel-main">
+    
+		<h1>＊Web Drill System＊</h1>
+		<br>
+		<br>
+		<br>
 
-<FORM method="POST" action="./LoginServlet">
-<CENTER>
-<TABLE border="2" width="600" cellpadding="0">
-   <TBODY>
-      <TR>
-         <TD><FONT color=white><B>ID</B></FONT></TD>
-         <TD><INPUT size="50" type="text" name="id"></TD>
-      </TR>
-      <TR>
-         <TD><FONT color=white><B>Password</B></FONT></TD>
-         <TD><INPUT size="40" type="password" name="password"></TD>
-      </TR>
-   </TBODY>
-</TABLE>
-</CENTER>
-<INPUT type="submit" value = "Login">
-<INPUT type="submit" value = "SignUp">
-</FORM>
-
+		<form method="POST" action="./LoginServlet">
+		<center>
+		<table border="2"　bordercolor=#FFFFE0 width="800">
+		   <tbody>
+ 		     <tr>
+ 		        <td><p class="font2">　　　  ID</p></td>
+ 		        <td><input size="60" type="text" name="id" maxlength="16"></td>
+ 		     </tr>
+ 		        <td><p class="font2">　PASSWORD</p></td>
+ 		        <td><input size="60" type="password" name="password" maxlength="16"></td>
+ 		     </tr>
+ 		  </tbody>
+		</table>
+		</center>
+		<br>
+		<input class="submit_button" type="submit" value="ログイン">
+		</form>
+		<br>
+		<a href="./student/createStudent.jsp">
+		<input class="submit_button" type="submit" value="新規登録">
+		</a>
+  </div>
+ </div>
+</div>
 </body>
 </html>
