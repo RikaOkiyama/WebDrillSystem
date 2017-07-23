@@ -1,4 +1,4 @@
-package servlet;
+package servlet.teacher;
 
 import java.io.IOException;
 
@@ -27,7 +27,7 @@ public class DeleteQuestionServlet extends HttpServlet{
 
 		manager.Delete(id);
 
-		response.sendRedirect(response.encodeRedirectURL("./top.jsp"));
+		response.sendRedirect(response.encodeRedirectURL("/jsp/teacher/delete.jsp"));
 
 	}
 }

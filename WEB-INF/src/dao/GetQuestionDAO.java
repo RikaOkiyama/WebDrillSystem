@@ -14,16 +14,16 @@ public class GetQuestionDAO extends DriverAccessor{
 	public ArrayList GetList(String id,Connection connection){
 		
 		try{
-			String sql="select * from question_table where id = ?";
+			String sql="select * from question";
 			
 			PreparedStatement stmt = connection.prepareStatement(sql);
-			stmt.setString(1, id);
 			ResultSet rs=stmt.executeQuery();
 			
 			ArrayList list = new ArrayList();
 			
 			while(rs.next()){
 				Question question = new Question();
+				question.setId(rs.getInt("id"));
 				question.setQuestion(rs.getString("question"));
 				question.setAnswer(rs.getString("answer"));
 				question.setActivation(rs.getInt("activation"));

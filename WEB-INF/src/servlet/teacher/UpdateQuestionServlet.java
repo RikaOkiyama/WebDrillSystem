@@ -1,18 +1,16 @@
 package servlet.teacher;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import beans.Question;
 import manager.QuestionManager;
 
-@WebServlet("/questionDisplay")
-public class QuestionDisplayServlet extends HttpServlet{
+@WebServlet("/updateQuestionServlet")
+public class UpdateQuestionServlet extends HttpServlet{
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
@@ -24,13 +22,14 @@ public class QuestionDisplayServlet extends HttpServlet{
 
 		request.setCharacterEncoding("UTF-8");
 
-		String id=request.getParameter("id");
+		String question=request.getParameter("question");
+		String answer=request.getParameter("answer");
+		int id=Integer.parseInt(request.getParameter("ID"));
 
 		QuestionManager manager=new QuestionManager();
 
-		Question question=manager.Select(id);
+		manager.Update(question,answer,id);
 
-		request.setAttribute("question",question);
-		getServletContext().getRequestDispatcher("/jsp/teacher/updateDelete.jsp").forward(request, response);
+		response.sendRedirect(response.encodeRedirectURL("/jsp/teacher/update.jsp"));
 	}
 }

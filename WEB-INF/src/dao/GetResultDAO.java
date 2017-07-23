@@ -27,9 +27,8 @@ public class GetResultDAO extends DriverAccessor{
 			{
 				Result result = new Result();
 				result.setUserId( rs.getString("userId") );
-				result.setAnswerDate( rs.getTimestamp("answerDate") );
 				result.setQuestionId( rs.getInt("questionId") );
-				result.setResult( rs.getInt("result") );
+				result.setResult( rs.getString("result") );
 				list.add(result);
 			}
 

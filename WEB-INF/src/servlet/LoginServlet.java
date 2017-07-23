@@ -34,15 +34,23 @@ public class LoginServlet extends HttpServlet{
 		//LoginManagerのcertifyメソッドを実行する
 		User user = manager.certifyUser(id,password);
 		
-		if(null==user){
-			request.setAttribute("ERROR", "IDとパスワードをもう一度確認してください");
-			getServletContext().getRequestDispatcher("/jsp/login.jsp");
+		if(user==null){
+			response.sendRedirect(response.encodeRedirectURL("./error.jsp"));
 		}
 		else{
 			//ユーザーの情報を保持する
 			HttpSession session=request.getSession();
 			session.setAttribute("user",user);
-			response.sendRedirect(response.encodeRedirectURL("./teacher/teacherTop.jsp"));
+			
+			System.out.println(user.getId());
+			System.out.println(user.getPassword());
+			System.out.println(user.getRole());
+			if(user.getRole() == 1){
+				response.sendRedirect(response.encodeRedirectURL("./teacher/teacherTop.jsp"));
+			}
+			else{
+			response.sendRedirect(response.encodeRedirectURL("./student/studentTop.jsp"));
+			}
 		}
 	}
 

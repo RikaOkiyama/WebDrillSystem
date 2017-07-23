@@ -1,4 +1,4 @@
-package servlet.teacher;
+package servlet.student;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import beans.User;
 import manager.GetQuestionManager;
 
-@WebServlet("/getQuestion")
+@WebServlet("/student/getQuestion")
 public class GetQuestionServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -40,6 +40,6 @@ public class GetQuestionServlet extends HttpServlet{
 
 		//取得したlistをquestionListと名付けjspに受け渡せる形にする
 		request.setAttribute("questionList",list);
-		getServletContext().getRequestDispatcher("/jsp/teacher/teacherSelect.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/jsp/student/studentSelect.jsp").forward(request, response);
 	}
 }

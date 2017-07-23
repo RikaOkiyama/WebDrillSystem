@@ -15,13 +15,10 @@
     <div class="panel-main">
     
 		<h1>＊Web Drill System＊</h1>
-		<br>
-		<br>
-		<br>
 
 		<form method="POST" action="./LoginServlet">
 		<center>
-		<table border="2"　bordercolor=#FFFFE0 width="800">
+		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>
  		     <tr>
  		        <td><p class="font2">　　　  ID</p></td>
@@ -33,13 +30,14 @@
  		  </tbody>
 		</table>
 		</center>
-		<br>
+		<br><br>
 		<input class="submit_button" type="submit" value="ログイン">
 		</form>
 		<br>
 		<a href="./student/createStudent.jsp">
 		<input class="submit_button" type="submit" value="新規登録">
-		</a>
+		</a><br>
+		<br>
   </div>
  </div>
 </div>

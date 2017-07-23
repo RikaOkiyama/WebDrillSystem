@@ -19,7 +19,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
   <div class="panel-in">
     <div class="panel-bg"></div>
     <div class="panel-main">
-<h1>問題の変更・削除</h1>
+<h1>問題を選択してください！</h1>
 <br>
 
 <p class="font2">表示されている問題：<%=list.size()%>件</p>
@@ -39,7 +39,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
       		Question question = (Question)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
+       	<td><a class="link1" href="/webDrill/questionDisplay2?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%></a></td>
       </tr>
       <% } %>
    </tbody>

@@ -20,17 +20,18 @@
 <br>
 <br>
 <br>
-      <a href="./createQuestion.jsp" >
-      <input class="submit_button" type="submit" value="問題の登録">
+      <a href="/webDrill/student/getQuestion" >
+      <input class="submit_button" type="submit" value="問題に答える">
       </a><br>
       <br>
-      <a href="/webDrill/getQuestion">
-      <input class="submit_button" type="submit" value="問題の編集・削除">
+      <a href="./GetResultServlet">
+      <input class="submit_button" type="submit" value="解答履歴を見る">
       </a><br>
       <br>
       <a href="/webDrill/logout">
-	  <input class="submit_button" type="submit" value=" ログアウト ">
+	  <input class="submit_button" type="submit" value="ログアウト">
 	  </a><br>
+	  <br>
     </div>
   </div>
 </div>

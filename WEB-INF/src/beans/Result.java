@@ -1,19 +1,17 @@
 package beans;
 
-import java.sql.Timestamp;
-
 public class Result {
 	
 	//属性
 	private String userId = null;
-	private Timestamp answerDate = null;
 	private int questionId;
-	private int result = 0;
+	private String answer;
+	private String result;
 	
-	public Result(String userId,Timestamp answerDate,int question, int result){
+	public Result(String userId,int questionId, String answer, String result){
 		this.userId = userId;
-		this.answerDate = answerDate;
 		this.questionId = questionId;
+		this.answer = answer;
 		this.result = result;
 	}
 	
@@ -27,14 +25,6 @@ public class Result {
 		this.userId = userId;
 	}
 
-	public Timestamp getAnswerDate() {
-		return answerDate;
-	}
-
-	public void setAnswerDate(Timestamp answerDate) {
-		this.answerDate = answerDate;
-	}
-
 	public int getQuestionId() {
 		return questionId;
 	}
@@ -43,11 +33,20 @@ public class Result {
 		this.questionId = questionId;
 	}
 
-	public int getResult() {
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	public String getResult() {
 		return result;
 	}
 
-	public void setResult(int result) {
+	public void setResult(String result) {
 		this.result = result;
 	}
+
 }

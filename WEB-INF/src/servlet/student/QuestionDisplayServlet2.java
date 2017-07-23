@@ -1,4 +1,4 @@
-package servlet;
+package servlet.student;
 
 import java.io.IOException;
 
@@ -7,10 +7,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-@WebServlet("/logout")
-public class LogoutServlet extends HttpServlet{
+import beans.Question;
+import manager.QuestionManager;
+
+@WebServlet("/questionDisplay2")
+public class QuestionDisplayServlet2 extends HttpServlet{
+
 	/**
 	 * 
 	 */
@@ -24,11 +27,16 @@ public class LogoutServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
 
-		HttpSession session = request.getSession(false);
+		request.setCharacterEncoding("UTF-8");
 
-		if (session!=null) {
-			session.invalidate();
-		}
-		response.sendRedirect(response.encodeRedirectURL("/webDrill/jsp/logout.jsp"));
+		String id=request.getParameter("id");
+
+		QuestionManager manager=new QuestionManager();
+
+		Question question=manager.Select(id);
+
+		
+		request.setAttribute("question",question);
+		getServletContext().getRequestDispatcher("/jsp/student/studentAnswer.jsp").forward(request, response);
 	}
 }

@@ -1,6 +1,7 @@
 package manager;
 import java.sql.Connection;
-
+import java.text.DecimalFormat;
+import java.util.Calendar;
 
 import dao.QuestionDAO;
 import beans.Question;
@@ -14,16 +15,16 @@ public class QuestionManager {
 	}
 
 	//  追加する
-	//  引数はuserオブジェクト
+	//  引数はquestionオブジェクト
 	public void createQuestion(Question question){
 
-		//  userDAOオブジェクト生成
+		//  questionDAOオブジェクト生成
 		QuestionDAO questionDAO = new QuestionDAO();
 
 		//  DataBaseへ接続し、コネクションオブジェクトを生成する
 		this.connection = questionDAO.createConnection();
 
-		//  userオブジェクトをDataBaseに登録する
+		//  questioオブジェクトをDataBaseに登録する
 		questionDAO.createQuestion(question, this.connection);
 
 		//  DataBaseとの接続を切断する
@@ -56,5 +57,24 @@ public class QuestionManager {
 
 		return question;
 	}
+	
+	public void Update(String question,String answer,int id){
+
+		Question question1 = new Question();
+
+		question1.setQuestion(question);
+		question1.setAnswer(answer);
+		question1.setId(id);
+
+		QuestionDAO dao = new QuestionDAO();
+		this.connection = dao.createConnection();
+
+		dao.Update(question1, this.connection);
+
+		dao.closeConnection(this.connection);
+
+		this.connection = null;
+	}
+
 }
 

@@ -26,16 +26,15 @@ public class ResultDAO extends DriverAccessor{
 			try{
 
 				//  SQLコマンド insert into=値をカラムに入れる
-				String sql = "insert into result (userId, answerDate, questionId,result) values (?, ?, ?, ?)";
+				String sql = "insert into result (userId, questionId, result) values (?, ?, ?)";
 
 				//  SQLコマンドの実行
 				PreparedStatement stmt = connection.prepareStatement(sql);
 
 				//  SQLコマンドのクエッションマークに値を、1番目から代入する
 				stmt.setString(1,result.getUserId());
-				stmt.setTimestamp(2,result.getAnswerDate());
-				stmt.setInt(3,result.getQuestionId());
-				stmt.setInt(4,result.getResult());
+				stmt.setInt(2,result.getQuestionId());
+				stmt.setString(3,result.getAnswer());
 				
 				stmt.executeUpdate();
 

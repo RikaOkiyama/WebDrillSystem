@@ -26,6 +26,7 @@ public class LoginDAO extends DriverAccessor{
 			User user = new User();
 			user.setId( rs.getString("id") );
 			user.setPassword( rs.getString("password") );
+			user.setRole( rs.getInt("role"));
 
 			stmt.close();
 			rs.close();
