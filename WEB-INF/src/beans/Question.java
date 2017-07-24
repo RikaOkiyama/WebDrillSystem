@@ -3,11 +3,24 @@ package beans;
 public class Question {
 
 	//属性
+	private int id = 0;
 	private String question = null;
 	private String answer = null;
 	private int activation = 0;
-	private int id = 0;
-	
+	private String userId = null;
+
+	//初期値を引数に持ったコンストラクタ
+	public Question(int id ,String question,String answer,int activation,String userId){
+		this.id = id;
+		this.question = question;
+		this.answer = answer;
+		this.activation = activation;
+		this.userId = userId;
+	}
+
+	//初期値を引数に持たないコンストラクタ
+	public Question(){}
+
 	public int getId() {
 		return id;
 	}
@@ -15,19 +28,7 @@ public class Question {
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	//初期値を引数に持ったコンストラクタ
-	public Question(int id ,String question,String answer,int activation){
-		this.id = id;
-		this.question = question;
-		this.answer = answer;
-		this.activation = activation;		
-	}
 	
-	//初期値を引数に持たないコンストラクタ
-	public Question(){}
-
-	//getメソッド
 	public String getQuestion() {
 		return question;
 	}
@@ -52,6 +53,12 @@ public class Question {
 		this.activation = activation;
 	}
 	
-	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	
 }

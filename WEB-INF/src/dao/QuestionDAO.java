@@ -18,7 +18,7 @@ public class QuestionDAO extends DriverAccessor{
 			try{
 
 				//  SQLコマンド insert into=値をカラムに入れる
-				String sql = "insert into question (question, answer, activation) values (?, ?, 0)";
+				String sql = "insert into question (question, answer, activation, userId) values ( ?, ?, ?, ?)";
 
 				//  SQLコマンドの実行
 				PreparedStatement stmt = connection.prepareStatement(sql);
@@ -26,6 +26,8 @@ public class QuestionDAO extends DriverAccessor{
 				//  SQLコマンドのクエッションマークに値を、1番目から代入する
 				stmt.setString(1,question.getQuestion());
 				stmt.setString(2,question.getAnswer());
+				stmt.setInt(3,question.getActivation());
+				stmt.setString(4,question.getUserId());
 				
 				stmt.executeUpdate();
 
@@ -57,6 +59,7 @@ public class QuestionDAO extends DriverAccessor{
 				question.setQuestion( rs.getString("question") );
 				question.setAnswer( rs.getString("answer") );
 				question.setActivation( rs.getInt("activation") );
+				question.setUserId( rs.getString("userId"));
 
 				stmt.close();
 				rs.close();
@@ -77,14 +80,15 @@ public class QuestionDAO extends DriverAccessor{
 
 			try{
 
-				String sql = "update question set question = ? ,answer = ? , activation = ? where id = ?";
+				String sql = "update question set question = ? ,answer = ? , activation = ? , userId = ? where id = ?";
 
 				PreparedStatement stmt = connection.prepareStatement(sql);
 
 				stmt.setString(1,question.getQuestion());
 				stmt.setString(2,question.getAnswer());
 				stmt.setInt(3,question.getActivation());
-				stmt.setInt(4,question.getId());
+				stmt.setString(4,question.getUserId());
+				stmt.setInt(5,question.getId());
 
 				stmt.executeUpdate();
 

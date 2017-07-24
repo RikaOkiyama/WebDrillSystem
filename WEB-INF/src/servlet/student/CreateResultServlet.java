@@ -46,7 +46,7 @@ public class CreateResultServlet extends HttpServlet {
 			service.createResult(result);
 
 			// フォワード
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/student/success.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/student/answerComplete.jsp");
 			dispatcher.forward(request, response);
 		
 	}

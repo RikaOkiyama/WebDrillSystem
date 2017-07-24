@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import beans.User;
 import manager.GetQuestionManager;
 
-@WebServlet("/getQuestion")
+@WebServlet("/getQuestionServlet")
 public class GetQuestionServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -31,7 +31,6 @@ public class GetQuestionServlet extends HttpServlet{
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("user");
 		String id = user.getId();
-		System.out.println(id);
 
 		GetQuestionManager manager=new GetQuestionManager();
 

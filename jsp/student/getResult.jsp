@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<%@ page import= "beans.Question" %>
+<%@ page import= "beans.Result" %>
 <%@ page import= "java.util.ArrayList" %>
 <%
-ArrayList list =  (ArrayList)request.getAttribute("questionList");
+ArrayList list =  (ArrayList)request.getAttribute("resultList");
 %>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
   <div class="panel-in">
     <div class="panel-bg"></div>
     <div class="panel-main">
-<h1>問題の変更・削除</h1>
+<h1>解答履歴</h1>
 <br>
 
 <p class="font2">表示されている問題：<%=list.size()%>件</p>
@@ -36,10 +36,10 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
    <tbody>
       <% 
       	for(int i=0;i<list.size();i++){
-      		Question question = (Question)list.get(i);
+      		Result result = (Result)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
+       	<td><a class="link1" href="/webDrill/questionDisplay2?id=<%=result.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%></a></td>
       </tr>
       <% } %>
    </tbody>

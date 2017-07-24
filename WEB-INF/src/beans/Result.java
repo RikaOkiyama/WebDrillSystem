@@ -5,16 +5,17 @@ public class Result {
 	//属性
 	private String userId = null;
 	private int questionId;
-	private String answer;
 	private String result;
+	private String answer;
 	
 	public Result(String userId,int questionId, String answer, String result){
 		this.userId = userId;
 		this.questionId = questionId;
-		this.answer = answer;
 		this.result = result;
+		this.answer = answer;
 	}
 	
+
 	public Result(){}
 
 	public String getUserId() {
@@ -48,5 +49,6 @@ public class Result {
 	public void setResult(String result) {
 		this.result = result;
 	}
+
 
 }

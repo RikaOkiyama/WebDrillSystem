@@ -8,16 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import beans.Result;
-import manager.GetResultManager;
+import beans.User;
+import manager.GetQuestionManager;
 
-@WebServlet("/questionDisplay")
-public class QuestionDisplayServlet extends HttpServlet{
+@WebServlet("/teacher/getStudentResult")
+public class GetStudentResultServlet extends HttpServlet{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
@@ -30,14 +28,17 @@ public class QuestionDisplayServlet extends HttpServlet{
 
 		request.setCharacterEncoding("UTF-8");
 
-		String id=request.getParameter("id");
+		HttpSession session = request.getSession();
+		User user = (User)session.getAttribute("user");
+		String id = user.getId();
 
-		GetResultManager manager=new GetResultManager();
+		GetQuestionManager manager=new GetQuestionManager();
 
+		//idが登録した全ての問題をlistに渡す
 		ArrayList list = manager.GetList(id);
 
-		
-		request.setAttribute("result",list);
-		getServletContext().getRequestDispatcher("/jsp/teacher/studentResult.jsp").forward(request, response);
+		//取得したlistをquestionListと名付けjspに受け渡せる形にする
+		request.setAttribute("questionList",list);
+		getServletContext().getRequestDispatcher("/jsp/teacher/teacherResultSelect.jsp").forward(request, response);
 	}
 }

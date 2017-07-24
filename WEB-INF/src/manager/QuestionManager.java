@@ -24,24 +24,13 @@ public class QuestionManager {
 		//  DataBaseへ接続し、コネクションオブジェクトを生成する
 		this.connection = questionDAO.createConnection();
 
-		//  questioオブジェクトをDataBaseに登録する
+		//  questionオブジェクトをDataBaseに登録する
 		questionDAO.createQuestion(question, this.connection);
 
 		//  DataBaseとの接続を切断する
 		questionDAO.closeConnection(this.connection);
 
 		//  コネクションオブジェクトを破棄する
-		this.connection = null;
-	}
-
-	public void Delete(String id) {
-		QuestionDAO dao = new QuestionDAO();
-		this.connection = dao.createConnection();
-
-		dao.Delete(id, this.connection);
-
-		dao.closeConnection(this.connection);
-
 		this.connection = null;
 	}
 
@@ -58,23 +47,6 @@ public class QuestionManager {
 		return question;
 	}
 	
-	public void Update(String question,String answer,int id){
-
-		Question question1 = new Question();
-
-		question1.setQuestion(question);
-		question1.setAnswer(answer);
-		question1.setId(id);
-
-		QuestionDAO dao = new QuestionDAO();
-		this.connection = dao.createConnection();
-
-		dao.Update(question1, this.connection);
-
-		dao.closeConnection(this.connection);
-
-		this.connection = null;
-	}
 
 }
 

@@ -14,7 +14,8 @@ public class GetResultDAO extends DriverAccessor{
 	public ArrayList GetList(String userId,Connection connection){
 
 		try{
-			String sql="select * from result_table where userId = ?";
+			
+			String sql="select * from result  left join question on result.questionId = question.id where id= ?";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1,userId);
@@ -22,13 +23,14 @@ public class GetResultDAO extends DriverAccessor{
 
 			ArrayList list = new ArrayList();
 
-			//登録されている日記の数だけ繰り返す
+			//登録されている履歴の数だけ繰り返す
 			while(rs.next())
 			{
 				Result result = new Result();
 				result.setUserId( rs.getString("userId") );
 				result.setQuestionId( rs.getInt("questionId") );
 				result.setResult( rs.getString("result") );
+				result.setAnswer( rs.getString("answer"));
 				list.add(result);
 			}
 

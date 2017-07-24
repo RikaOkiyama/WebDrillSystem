@@ -31,7 +31,6 @@ public class GetQuestionServlet extends HttpServlet{
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("user");
 		String id = user.getId();
-		System.out.println(id);
 
 		GetQuestionManager manager=new GetQuestionManager();
 

@@ -42,9 +42,6 @@ public class LoginServlet extends HttpServlet{
 			HttpSession session=request.getSession();
 			session.setAttribute("user",user);
 			
-			System.out.println(user.getId());
-			System.out.println(user.getPassword());
-			System.out.println(user.getRole());
 			if(user.getRole() == 1){
 				response.sendRedirect(response.encodeRedirectURL("./teacher/teacherTop.jsp"));
 			}
