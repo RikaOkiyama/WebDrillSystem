@@ -32,7 +32,10 @@
 		</center>
 		<br>
 		<input class="submit_button" type="submit" value="登録">
-		</form>
+		</form><br>
+		 <a href="/webDrill/jsp/login.jsp" >
+      <input class="submit_button" type="submit" value="ログイン画面に戻る">
+      </a><br><br>
 		</div>
 	</div>
 </div>

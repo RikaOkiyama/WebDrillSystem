@@ -24,15 +24,9 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
 
 <p class="font2">表示されている問題：<%=list.size()%>件</p>
 <br>
-<br>
-
 <form>
 <table border="0" cellpadding="0">
-	<thead>
-		<tr>
-			<td/>
-		</tr>
-	</thead>
+	
    <tbody>
       <% 
       	for(int i=0;i<list.size();i++){
@@ -46,6 +40,9 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
 </table>
 </form>
 <br>
+<a href="/webDrill/jsp/student/studentTop.jsp" >
+      <input class="submit_button" type="submit" value="メニュー画面に戻る">
+      </a><br><br>
 </div>
 </div>
 </div>

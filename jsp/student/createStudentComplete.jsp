@@ -22,7 +22,7 @@
 <br>
       <a href="./login.jsp" >
       <input class="submit_button" type="submit" value="ログイン画面に戻る">
-      </a><br>
+      </a><br><br>
     </div>
   </div>
 </div>

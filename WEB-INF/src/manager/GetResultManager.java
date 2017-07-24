@@ -27,4 +27,18 @@ public class GetResultManager {
 		return list;
 		
 	}
+
+	public ArrayList GetList2(String id,String userId) {
+		GetResultDAO dao = new GetResultDAO();
+		
+		this.connection = dao.createConnection();
+		
+		ArrayList list = dao.GetList2(id,userId,this.connection);
+		
+		dao.closeConnection(this.connection);
+		
+		this.connection = null;
+		
+		return list;
+	}
 }

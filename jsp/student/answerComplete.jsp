@@ -18,10 +18,9 @@
     <div class="panel-main">
 <h1>解答しました！</h1>
 <br>
-<br>
       <a href="/webDrill/jsp/student/studentTop.jsp" >
       <input class="submit_button" type="submit" value="メニュー画面に戻る">
-      </a><br>
+      </a><br><br>
     </div>
   </div>
 </div>

@@ -1,15 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import= "beans.Question" %>
+<%@ page import= "beans.Result" %>
 <%@ page import= "java.util.ArrayList" %>
 <%
-ArrayList list =  (ArrayList)request.getAttribute("questionList");
+ArrayList list =  (ArrayList)request.getAttribute("resultList");
+%>
+<%
+	Question question =  (Question)request.getAttribute("question");
 %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>問題選択</title>
+<title>履歴</title>
 <link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
 </head>
 <body background="/webDrill/jsp/book.jpg">
@@ -19,31 +24,25 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
   <div class="panel-in">
     <div class="panel-bg"></div>
     <div class="panel-main">
-<h1>問題を選択してください！</h1>
-<br>
 
-<p class="font2">表示されている問題：<%=list.size()%>件</p>
 <br>
-
 <form>
-<table border="0" cellpadding="0">
-   <tbody>
-      <% 
-      	for(int i=0;i<list.size();i++){
-      		Question question = (Question)list.get(i);
-      %>
-      <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay2?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%></a></td>
-      </tr>
-      <% } %>
-   </tbody>
-</table>
+<h1>解答履歴</h1>
+<br>
+	<c:forEach items="${result}" var="list">
+	<p class="font2">
+	(解答者) ${list.userId}
+	　(答え) ${list.answer}
+	　(解答者の答え) ${list.result}
+	</p>
+	</c:forEach>
 </form>
 <br>
 <a href="/webDrill/jsp/student/studentTop.jsp" >
       <input class="submit_button" type="submit" value="メニュー画面に戻る">
       </a><br><br>
+		</div>
+	</div>
 </div>
-</div>
-</div>
+</body>
 </html>

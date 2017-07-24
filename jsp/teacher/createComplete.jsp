@@ -18,10 +18,9 @@
     <div class="panel-main">
 <h1>問題が登録できました！</h1>
 <br>
-<br>
       <a href="/webDrill/jsp/teacher/teacherTop.jsp" >
       <input class="submit_button" type="submit" value="メニュー画面に戻る">
-      </a><br>
+      </a><br><br>
     </div>
   </div>
 </div>

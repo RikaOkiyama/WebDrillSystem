@@ -36,6 +36,9 @@
 		<input class="submit_button" type="submit" value="解答する">
 		</form>
 		<br>
+		<a href="/webDrill/jsp/student/studentTop.jsp" >
+     	 <input class="submit_button" type="submit" value="メニュー画面に戻る">
+      	</a><br><br>
 		</div>
 	</div>
 </div>

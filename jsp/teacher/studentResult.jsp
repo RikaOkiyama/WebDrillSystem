@@ -28,6 +28,7 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
 <br>
 <form>
 <h1>解答履歴</h1>
+<br>
 	<c:forEach items="${result}" var="list">
 	<p class="font2">
 	(解答者) ${list.userId}
@@ -39,7 +40,7 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
 <br>
 <a href="/webDrill/jsp/teacher/teacherTop.jsp" >
       <input class="submit_button" type="submit" value="メニュー画面に戻る">
-      </a><br>
+      </a><br><br>
 		</div>
 	</div>
 </div>
