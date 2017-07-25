@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>問題登録</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css">
 </head>
-<body background="../book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 <br>
 <div align="center">
   <div class="panel-in">
@@ -15,7 +15,7 @@
     
 		<h1>問題登録</h1>
 		<br>
-		<form action="/webDrill/CreateQuestionServlet" method="post">
+		<form action="/webDrill/teacher/CreateQuestion" method="post">
 		<center>
 		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>
@@ -33,7 +33,7 @@
 		<input class="submit_button" type="submit" value="登録">
 		</form>
 		<br>
-		<a href="./teacherTop.jsp" >
+		<a href="/webDrill/jsp/teacher/teacherTop.jsp" >
       <input class="submit_button" type="submit" value="メニュー画面に戻る">
       </a><br><br>
 		</div>

@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>解答の完了</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
 </head>
-<body background="../book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 </body>
 
 <br>

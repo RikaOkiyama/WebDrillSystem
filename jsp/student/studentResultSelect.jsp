@@ -11,9 +11,9 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>履歴選択</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
 </head>
-<body background="../book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 </body>
 
 <div align="center">
@@ -33,7 +33,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
       		Question question = (Question)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay3?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
+       	<td><a class="link1" href="/webDrill/student/questionDisplay3?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
       </tr>
       <% } %>
    </tbody>

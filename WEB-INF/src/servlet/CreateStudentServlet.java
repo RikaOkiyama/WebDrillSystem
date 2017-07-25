@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import beans.User;
 import manager.UserManager;
 
-@WebServlet("/CreateStudentServlet")
+@WebServlet("/CreateStudent")
 public class CreateStudentServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
@@ -35,7 +35,7 @@ public class CreateStudentServlet extends HttpServlet {
 			service.createUser(user);
 
 			// フォワード
-			RequestDispatcher dispatcher = request.getRequestDispatcher("./student/createStudentComplete.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/webDrill/jsp/student/createStudentComplete.jsp");
 			dispatcher.forward(request, response);
 		
 	}

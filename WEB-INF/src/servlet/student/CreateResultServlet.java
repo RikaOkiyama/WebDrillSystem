@@ -14,7 +14,7 @@ import beans.Result;
 import beans.User;
 import manager.ResultManager;
 
-@WebServlet("/CreateResultServlet")
+@WebServlet("/student/CreateResult")
 public class CreateResultServlet extends HttpServlet {
 	/**
 	 * 
@@ -46,7 +46,7 @@ public class CreateResultServlet extends HttpServlet {
 			service.createResult(result);
 
 			// フォワード
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/student/answerComplete.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/webDrill/jsp/student/answerComplete.jsp");
 			dispatcher.forward(request, response);
 		
 	}
