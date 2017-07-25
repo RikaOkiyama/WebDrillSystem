@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>新規登録完了</title>
-<link rel="stylesheet" type="text/css" href="./css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="../jsp/css/main.css" media="all">
 </head>
-<body background="./book.jpg">
+<body background="../jsp/book.jpg">
 </body>
 
 <br>

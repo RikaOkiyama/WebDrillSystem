@@ -18,15 +18,15 @@
     <div class="panel-main">
 <h1>Web Drill Systemにようこそ！</h1>
 <br>
-      <a href="/webDrill/jsp/teacher/createQuestion.jsp" >
+      <a href="./createQuestion.jsp" >
       <input class="submit_button" type="submit" value="問題の登録">
       </a><br>
       <br>
-      <a href="/webDrill/teacher/getStudentResult" >
+      <a href="../../getStudentResult" >
       <input class="submit_button" type="submit" value="生徒の解答履歴を見る">
       </a><br>
       <br>
-      <a href="/webDrill/logout">
+      <a href="../logout.jsp">
 	  <input class="submit_button" type="submit" value=" ログアウト ">
 	  </a><br>
     </div>

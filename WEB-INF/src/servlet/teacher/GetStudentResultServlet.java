@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import beans.User;
 import manager.GetQuestionManager;
 
-@WebServlet("/teacher/getStudentResult")
+@WebServlet("/getStudentResult")
 public class GetStudentResultServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;

@@ -6,7 +6,7 @@
 <title>ログインページ</title>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-<body background="book.jpg">
+<body background="./book.jpg">
 <br>
 
 <div align="center">
@@ -16,7 +16,7 @@
     
 		<h1>＊Web Drill System＊</h1>
 
-		<form method="POST" action="./LoginServlet">
+		<form method="POST" action="../LoginServlet">
 		<center>
 		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>

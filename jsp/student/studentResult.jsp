@@ -15,9 +15,9 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>履歴</title>
-<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
 </head>
-<body background="/webDrill/jsp/book.jpg">
+<body background="../book.jpg">
 </body>
 
 <div align="center">
