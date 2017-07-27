@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>Web Drill Systemにようこそ！</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
 </head>
-<body background="../book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 </body>
 
 <br>
@@ -26,7 +26,7 @@
       <input class="submit_button" type="submit" value="生徒の解答履歴を見る">
       </a><br>
       <br>
-      <a href="/webDrill/logout">
+      <a href="/webDrill/jsp/logout.jsp">
 	  <input class="submit_button" type="submit" value=" ログアウト ">
 	  </a><br>
     </div>

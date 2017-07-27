@@ -21,7 +21,7 @@
     <div class="panel-main">
 <h1><%=question.getId()%>: <%=question.getQuestion()%></h1>
 <br>
-<form action="/webDrill/CreateResultServlet" method="post">
+<form action="/webDrill/student/CreateResult" method="post">
 		<center>
 		   <tbody>
 		     <tr>
