@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>Web Drill Systemにようこそ！</title>
-<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
 </head>
-<body background="/webDrill/jsp/book.jpg">
+<body background="../book.jpg">
 </body>
 
 <br>

@@ -15,7 +15,7 @@
     
 		<h1>問題登録</h1>
 		<br>
-		<form action="/webDrill/teacher/CreateQuestion" method="post">
+		<form action="/webDrill/CreateQuestionServlet" method="post">
 		<center>
 		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>

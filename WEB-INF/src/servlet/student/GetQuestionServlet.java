@@ -39,6 +39,6 @@ public class GetQuestionServlet extends HttpServlet{
 
 		//取得したlistをquestionListと名付けjspに受け渡せる形にする
 		request.setAttribute("questionList",list);
-		getServletContext().getRequestDispatcher("/webDrill/jsp/student/studentSelect.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/jsp/student/studentSelect.jsp").forward(request, response);
 	}
 }
