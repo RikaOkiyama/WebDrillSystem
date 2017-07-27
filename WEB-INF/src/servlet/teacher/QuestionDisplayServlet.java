@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import beans.Result;
 import manager.GetResultManager;
 
-@WebServlet("/questionDisplay")
+@WebServlet("/teacher/questionDisplay")
 public class QuestionDisplayServlet extends HttpServlet{
 
 	/**

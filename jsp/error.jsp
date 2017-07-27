@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>Web Drill System Error</title>
-<link rel="stylesheet" type="text/css" href="./css/main.css" media="all">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css" media="all">
 </head>
-<body background="./book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 </body>
 
 <br>
@@ -21,7 +21,7 @@
 <p class="font2">IDとPASSWORDを確認して<br>ログインしなおしてください！</p>
 <br>
 <br>
-      <a href="./login.jsp" >
+      <a href="/webDrill/jsp/login.jsp" >
       <input class="submit_button" type="submit" value="ログイン画面に戻る">
       </a><br>
     </div>

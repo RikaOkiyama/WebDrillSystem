@@ -14,7 +14,7 @@ import beans.Result;
 import beans.User;
 import manager.GetResultManager;
 
-@WebServlet("/questionDisplay3")
+@WebServlet("/student/questionDisplay3")
 public class QuestionDisplayServlet3 extends HttpServlet{
 
 	/**
@@ -43,7 +43,7 @@ public class QuestionDisplayServlet3 extends HttpServlet{
 				
 
 		request.setAttribute("result",list);
-		getServletContext().getRequestDispatcher("/jsp/student/studentResult.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/webDrill/jsp/student/studentResult.jsp").forward(request, response);
 		
 	}
 }

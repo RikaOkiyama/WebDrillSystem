@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>ログインページ</title>
-<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css">
 </head>
-<body background="book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 <br>
 
 <div align="center">
@@ -16,7 +16,7 @@
     
 		<h1>＊Web Drill System＊</h1>
 
-		<form method="POST" action="./LoginServlet">
+		<form method="POST" action="/webDrill/login">
 		<center>
 		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>
@@ -34,7 +34,7 @@
 		<input class="submit_button" type="submit" value="ログイン">
 		</form>
 		<br>
-		<a href="./student/createStudent.jsp">
+		<a href="/webDrill/jsp/student/createStudent.jsp">
 		<input class="submit_button" type="submit" value="新規登録">
 		</a><br>
 		<br>

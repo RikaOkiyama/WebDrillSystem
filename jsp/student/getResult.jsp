@@ -33,7 +33,7 @@ ArrayList list =  (ArrayList)request.getAttribute("resultList");
       		Result result = (Result)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay2?id=<%=result.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%></a></td>
+       	<td><a class="link1" href="/webDrill/student/questionDisplay2?id=<%=result.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%></a></td>
       </tr>
       <% } %>
    </tbody>

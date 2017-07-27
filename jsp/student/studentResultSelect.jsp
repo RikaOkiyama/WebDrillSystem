@@ -33,7 +33,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
       		Question question = (Question)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay3?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
+       	<td><a class="link1" href="/webDrill/student/questionDisplay3?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
       </tr>
       <% } %>
    </tbody>

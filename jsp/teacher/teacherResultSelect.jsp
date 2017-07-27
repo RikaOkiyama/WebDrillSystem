@@ -24,6 +24,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
 
 <p class="font2">表示されている問題：<%=list.size()%>件</p>
 <br>
+<br>
 
 <form>
 <table border="0" cellpadding="0">
@@ -38,7 +39,7 @@ ArrayList list =  (ArrayList)request.getAttribute("questionList");
       		Question question = (Question)list.get(i);
       %>
       <tr>
-       	<td><a class="link1" href="/webDrill/questionDisplay?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
+       	<td><a class="link1" href="/webDrill/teacher/questionDisplay?id=<%=question.getId()%>"><%=question.getId()%>：(問題)<%=question.getQuestion()%>　(答え)<%=question.getAnswer()%></a></td>
       </tr>
       <% } %>
    </tbody>

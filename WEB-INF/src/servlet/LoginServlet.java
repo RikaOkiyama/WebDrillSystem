@@ -4,6 +4,7 @@ package servlet;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import beans.User;
 import manager.LoginManager;
 
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
@@ -35,7 +37,7 @@ public class LoginServlet extends HttpServlet{
 		User user = manager.certifyUser(id,password);
 		
 		if(user==null){
-			response.sendRedirect(response.encodeRedirectURL("./error.jsp"));
+			response.sendRedirect(response.encodeRedirectURL("/webDrill/jsp//error.jsp"));
 		}
 		else{
 			//ユーザーの情報を保持する
@@ -43,10 +45,10 @@ public class LoginServlet extends HttpServlet{
 			session.setAttribute("user",user);
 			
 			if(user.getRole() == 1){
-				response.sendRedirect(response.encodeRedirectURL("./teacher/teacherTop.jsp"));
+				response.sendRedirect(response.encodeRedirectURL("/webDrill/jsp/teacher/teacherTop.jsp"));
 			}
 			else{
-			response.sendRedirect(response.encodeRedirectURL("./student/studentTop.jsp"));
+			response.sendRedirect(response.encodeRedirectURL("/webDrill/jsp/student/studentTop.jsp"));
 			}
 		}
 	}

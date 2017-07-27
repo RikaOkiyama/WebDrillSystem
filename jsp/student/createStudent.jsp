@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>新規登録</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="/webDrill/jsp/css/main.css">
 </head>
-<body background="../book.jpg">
+<body background="/webDrill/jsp/book.jpg">
 <br>
 
 <div align="center">
@@ -16,7 +16,7 @@
     
 		<h1>新規登録</h1>
 		<br>
-		<form action="../CreateStudentServlet" method="post">
+		<form action="/webDrill/CreateStudent" method="post">
 		<center>
 		<table border="2" bordercolor=#FFFFE0 width="800">
 		   <tbody>

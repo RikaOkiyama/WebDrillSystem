@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import beans.Question;
 import manager.QuestionManager;
 
-@WebServlet("/questionDisplay2")
+@WebServlet("/student/questionDisplay2")
 public class QuestionDisplayServlet2 extends HttpServlet{
 
 	/**
@@ -37,6 +37,6 @@ public class QuestionDisplayServlet2 extends HttpServlet{
 
 		
 		request.setAttribute("question",question);
-		getServletContext().getRequestDispatcher("/jsp/student/studentAnswer.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/webDrill/jsp/student/studentAnswer.jsp").forward(request, response);
 	}
 }

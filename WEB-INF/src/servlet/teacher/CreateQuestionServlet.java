@@ -14,7 +14,7 @@ import beans.Question;
 import beans.User;
 import manager.QuestionManager;
 
-@WebServlet("/CreateQuestionServlet")
+@WebServlet("/teacher/CreateQuestionServlet")
 public class CreateQuestionServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
